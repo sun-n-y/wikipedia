@@ -42,6 +42,7 @@ h1 {
 }
 
 .form-input {
+    padding-left: .5rem;
     background-color: #f8fafc;
     border: 1px solid #e2e8f0;
     border-top-left-radius: .3rem;
@@ -64,11 +65,34 @@ button:hover {
     color: black;
 }
 
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    width: 6rem;
+    height: 6rem;
+    border: 5px solid #e2e8f0;
+    border-radius: 50%;
+    border-top-color: #645cff;
+    animation: spinner 0.6s linear infinite;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
 .results {
     display: grid;
     max-width: 1200px;
     margin: 1rem auto;
     gap: 1rem;
+}
+
+.error {
+    color: rgb(179, 0, 0);
+    text-transform: capitalize;
+    text-align: center;
 }
 
 .card {
